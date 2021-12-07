@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "ddb731a7-d032-4de5-baf8-1c03f85186c2",
+		"name": "Translo API Shared Set",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Translate",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/translate?to=es&text=hey there!",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"translate"
+					],
+					"query": [
+						{
+							"key": "to",
+							"value": "es",
+							"description": "ISO-6391 Language code of target text"
+						},
+						{
+							"key": "text",
+							"value": "hey there!",
+							"description": "TEXT UP TO 1640 CHARACTERS ONLY. For more volumes check Big Translate method"
+						},
+						{
+							"key": "from",
+							"value": "en",
+							"description": "Language code of passed text.\nOptional, but should be passed because when a text is small, language may be detected not correctly and a text won't be translated.",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Big Translate",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "to",
+							"value": "es",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "there can be infinitely large text here",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "en",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/bigTranslate",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"bigTranslate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detect language of text",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/detect?text=hi there!",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"detect"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "hi there!",
+							"description": "\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supported languages",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/get_languages",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"get_languages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Text Examples",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/examples?lang=en&text=hey",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"examples"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en",
+							"description": "language code of passed text"
+						},
+						{
+							"key": "text",
+							"value": "hey"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dictionary. Meaning of words",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/dictionary?lang=en&text=hey",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"dictionary"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en",
+							"description": "Language code of the word below"
+						},
+						{
+							"key": "text",
+							"value": "hey",
+							"description": "The word we need to get the meaning of"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Speech text",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "translo.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "API_KEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://translo.p.rapidapi.com/speech?lang=en&text=hey",
+					"protocol": "https",
+					"host": [
+						"translo",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"speech"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en",
+							"description": "language of the tex"
+						},
+						{
+							"key": "text",
+							"value": "hey"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
