@@ -12,11 +12,6 @@ For personalized integration support or private plans with higher quotas, please
 # Getting started
 To start using Translo, you need sign up on [RapidAPI](https://rapidapi.com/) first.
 
-1. The first need [Go](https://golang.org/) installed (**version 1.13+ is required**), then you can use the below Go command to install Gin.
+1. Go [here](https://rapidapi.com/armangokka/api/translo/pricing) and choose _free_ plan
 
-2. Go [here](https://rapidapi.com/armangokka/api/translo/pricing) and choose _free_ plan
-
-3. Download POSTMAN collection or generate library via Swagger
-```sh
-$ go get -u github.com/gin-gonic/gin
-```
+2. There are two ways to 
