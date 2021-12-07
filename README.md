@@ -9,9 +9,22 @@ Documentation for the [Translo Translation API](https://rapidapi.com/armangokka/
 
 For personalized integration support or private plans with higher quotas, please contact [armanokka@mail.ru](mailto:armanokka@mail.ru) or via Telegram [@qqcod](https://t.me/qqcod).
 
-# Getting started
-To start using Translo, you need sign up on [RapidAPI](https://rapidapi.com/) first.
+## Contents
+- [Authorization](#authorization)
+- [Methods](#methods)
+- - [Translate](#translate)
 
-1. Go [here](https://rapidapi.com/armangokka/api/translo/pricing) and choose _free_ plan
 
-2. There are two ways to 
+## Authorization
+Base URL of the API:
+```sh
+https://translo.p.rapidapi.com/
+```
+
+Every request must contain these headers:
+- "**x-rapidapi-host**" header that is always "_translo.p.rapidapi.com_"
+- "**x-rapidapi-key**" that is your API keys from [RapidAPI](https://rapidapi.com/)
+## Methods
+There are few methods to interact with  api:
+# Translate
+Method to translate a text
